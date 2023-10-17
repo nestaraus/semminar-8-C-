@@ -40,12 +40,15 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     }
             for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        if(i!=minRow)
+        {for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (i!=minRow&&j!=minColumn)
+            if (j!=minColumn)
             Console.Write($"{matrix[i,j]} \t");
         }
+
         Console.WriteLine();
+        } 
     }
 }
 
